@@ -1,0 +1,6 @@
+{
+  "verifyConditions": ["@semantic-release/github"],
+  "publish": [["@semantic-release/github", { "assets": [ {"path": "./*.tar.gz"}, ] }]],
+  "prepare" : [],
+  "repositoryUrl": "https://github.com/happening-oss/rabbitmq-message-ops"
+}

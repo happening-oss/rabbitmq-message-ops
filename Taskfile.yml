@@ -1,0 +1,28 @@
+version: 3
+
+tasks:
+  test:
+    desc: test
+    cmds:
+      - go test -v ./...
+
+  lint:
+    desc: lint
+    cmds:
+      - golangci-lint run -E asasalint,contextcheck,dupl,errchkjson,errname,exportloopref,gocognit,goconst,gosec,importas,nilnil,promlinter,revive,testpackage,usestdlibvars
+
+  release-binaries:
+    vars:
+      TARGET_OS: "linux darwin windows"
+      TARGET_ARCH: "amd64"
+    cmds:
+      - |
+        if test -z "{{.BINARY_NAME}}" || test -z "{{.BINARY_PATH}}"; then echo "missing binary params" && exit 1; fi
+        TARGET_OS="{{.TARGET_OS}}"
+        TARGET_ARCH="{{.TARGET_ARCH}}"
+        for GOOS in $TARGET_OS; do
+          for GOARCH in $TARGET_ARCH; do
+            GOOS=$GOOS GOARCH=$GOARCH go build -o {{.BINARY_NAME}} {{.BINARY_PATH}}
+            tar -czvf {{.BINARY_NAME}}_${GOOS}_${GOARCH}.tar.gz {{.BINARY_NAME}}
+          done
+        done

@@ -1,0 +1,24 @@
+###
+POST localhost:15672/api/exchanges/vhost/data/publish
+content-type: application/json
+authorization: Basic Z3Vlc3Q6Z3Vlc3Q=
+
+{
+  "properties": {
+    "delivery_mode": 2,
+    "headers": {
+      "key1": "val1.123",
+      "key2": "val2.456",
+      "key3": "val3.789"
+    },
+    "reply_to": "reply_queue",
+    "priority": 1,
+    "correlation_id": "157",
+    "message_id": "17342",
+    "type": "msg.type",
+    "timestamp": 978307200
+  },
+  "routing_key": "some.routing.key",
+  "payload": "{\"key\":\"val\"}",
+  "payload_encoding": "string"
+}

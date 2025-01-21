@@ -1,0 +1,12 @@
+issues:
+  exclude-rules:
+    - path: .*_test\.go
+      text: "dot-imports: should not use dot imports"
+      linters:
+        - revive
+    - path: (move|copy)_test\.go
+      linters:
+        - dupl
+    - path: (queue|stream)_test\.go
+      linters:
+        - dupl

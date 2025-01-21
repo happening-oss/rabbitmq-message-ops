@@ -1,0 +1,89 @@
+name: "ci"
+
+on: push
+
+jobs:
+
+  test:
+    name: Test and Lint code
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup go v1.21
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Install taskfile
+        run: |
+          curl -sL https://taskfile.dev/install.sh | sh
+          sudo mv ./bin/task /usr/local/bin/
+
+      - name: Install golangci-lint
+        run: curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.56.2
+
+      - name: Download dependencies
+        run: go mod download
+
+      - name: Run lint and test
+        run: task lint test
+
+  release:
+    name: Release binaries
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    needs: test
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup go v1.21
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Install taskfile
+        run: |
+          curl -sL https://taskfile.dev/install.sh | sh
+          sudo mv ./bin/task /usr/local/bin/
+
+      - name: Release binaries
+        env:
+          BINARY_NAME: cli
+          BINARY_PATH: ./cmd/cli
+        run: task release-binaries
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: ./*tar.gz
+
+  version:
+    name: Create new semantic version
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    needs: release
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifacts
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Create New Version
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
