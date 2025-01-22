@@ -7,16 +7,17 @@
 </h1>
 
 <p align="center">
-    <a href="https://goreportcard.com/report/github.com/happening-oss/rabbitmq-message-ops">
-        <img src="https://goreportcard.com/badge/github.com/happening-oss/rabbitmq-message-ops" alt="Go Report"/></a>
+    <a href="https://goreportcard.com/report/happening-oss/rabbitmq-message-ops">
+        <img src="https://goreportcard.com/badge/happening-oss/rabbitmq-message-ops" alt="Go Report"/></a>
+    <a href="https://raw.githack.com/wiki/happening-oss/rabbitmq-message-ops/coverage/coverage.html">
+        <img src="https://github.com/happening-oss/rabbitmq-message-ops/wiki/coverage/coverage.svg" alt="Go Coverage"/></a>
     <a href="https://github.com/happening-oss/rabbitmq-message-ops/actions/workflows/ci.yml">
-        <img src="https://github.com/happening-oss/rabbitmq-message-ops/actions/workflows/ci.yml/badge.svg" alt="Build Status"/></a>
+        <img src="https://img.shields.io/github/actions/workflow/status/happening-oss/rabbitmq-message-ops/ci.yml" alt="Build Status"/></a>
     <a href="https://github.com/happening-oss/rabbitmq-message-ops/releases">
         <img src="https://img.shields.io/github/v/release/happening-oss/rabbitmq-message-ops" alt="Latest Release"/></a>
     <a href="https://github.com/happening-oss/rabbitmq-message-ops/blob/master/LICENSE">
         <img src="https://img.shields.io/github/license/happening-oss/rabbitmq-message-ops" alt="MIT License"/></a>
 </p>
-
 
 `rabbitmq-message-ops` is an open-source command-line interface (CLI) tool for managing RabbitMQ messages.
 

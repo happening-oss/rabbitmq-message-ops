@@ -31,6 +31,16 @@ jobs:
       - name: Run lint and test
         run: task lint test
 
+      - name: Update coverage report
+        if: github.ref == 'refs/heads/master'
+        uses: ncruces/go-coverage-report@v0
+        with:
+          report: true
+          chart: true
+          amend: true
+          output-dir: coverage
+        continue-on-error: true
+
   release:
     name: Release binaries
     runs-on: ubuntu-latest
