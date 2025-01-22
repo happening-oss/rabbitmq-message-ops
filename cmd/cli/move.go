@@ -3,8 +3,8 @@ package main
 import (
 	"github.com/urfave/cli/v2"
 
-	"rabbitmq-message-ops/cmd/cli/util"
-	"rabbitmq-message-ops/internal/messaging/management/handlers"
+	"github.com/happening-oss/rabbitmq-message-ops/cmd/cli/util"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/management/handlers"
 )
 
 func moveMessages() *cli.Command {

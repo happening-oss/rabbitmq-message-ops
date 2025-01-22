@@ -3,8 +3,8 @@ package handlers
 import (
 	"github.com/rabbitmq/amqp091-go"
 
-	"rabbitmq-message-ops/internal/messaging"
-	"rabbitmq-message-ops/internal/messaging/management/mappers"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/management/mappers"
 )
 
 type CopyHandler struct {

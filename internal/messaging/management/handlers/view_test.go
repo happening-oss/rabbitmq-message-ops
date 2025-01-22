@@ -8,7 +8,7 @@ import (
 	. "github.com/onsi/gomega"
 	"github.com/rabbitmq/amqp091-go"
 
-	"rabbitmq-message-ops/internal/messaging/management/handlers"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/management/handlers"
 )
 
 var _ = Describe("View handler", func() {

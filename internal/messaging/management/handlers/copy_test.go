@@ -8,10 +8,10 @@ import (
 	"github.com/rabbitmq/amqp091-go"
 	"github.com/stretchr/testify/mock"
 
-	mmocks "rabbitmq-message-ops/internal/messaging/mocks"
-	"rabbitmq-message-ops/internal/tests/util"
+	mmocks "github.com/happening-oss/rabbitmq-message-ops/internal/messaging/mocks"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/tests/util"
 
-	"rabbitmq-message-ops/internal/messaging/management/handlers"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/management/handlers"
 )
 
 var _ = Describe("Copy handler", func() {

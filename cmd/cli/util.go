@@ -11,12 +11,12 @@ import (
 	"github.com/rabbitmq/amqp091-go"
 	"github.com/urfave/cli/v2"
 
-	"rabbitmq-message-ops/cmd/cli/util"
-	"rabbitmq-message-ops/internal/messaging"
-	"rabbitmq-message-ops/internal/messaging/management/handlers"
-	"rabbitmq-message-ops/internal/messaging/management/managers"
-	"rabbitmq-message-ops/internal/messaging/rabbitmq"
-	"rabbitmq-message-ops/internal/messaging/selectors"
+	"github.com/happening-oss/rabbitmq-message-ops/cmd/cli/util"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/management/handlers"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/management/managers"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/rabbitmq"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/selectors"
 )
 
 // region Helpers

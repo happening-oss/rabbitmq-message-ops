@@ -7,7 +7,7 @@ import (
 
 	"github.com/urfave/cli/v2"
 
-	"rabbitmq-message-ops/cmd/cli/util"
+	"github.com/happening-oss/rabbitmq-message-ops/cmd/cli/util"
 )
 
 var log *slog.Logger

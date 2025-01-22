@@ -7,9 +7,9 @@ import (
 
 	"github.com/rabbitmq/amqp091-go"
 
-	"rabbitmq-message-ops/internal/messaging"
-	"rabbitmq-message-ops/internal/messaging/management/handlers"
-	"rabbitmq-message-ops/internal/messaging/selectors"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/management/handlers"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/selectors"
 )
 
 const (

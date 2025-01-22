@@ -1,4 +1,4 @@
-module rabbitmq-message-ops
+module github.com/happening-oss/rabbitmq-message-ops
 
 go 1.21
 

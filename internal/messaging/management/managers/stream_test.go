@@ -12,14 +12,14 @@ import (
 	"github.com/rabbitmq/amqp091-go"
 	"github.com/stretchr/testify/mock"
 
-	"rabbitmq-message-ops/internal/messaging/mocks"
-	rmocks "rabbitmq-message-ops/internal/messaging/rabbitmq/mocks"
-	smocks "rabbitmq-message-ops/internal/messaging/selectors/mocks"
-	"rabbitmq-message-ops/internal/tests/stubs"
-	"rabbitmq-message-ops/internal/tests/util"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/mocks"
+	rmocks "github.com/happening-oss/rabbitmq-message-ops/internal/messaging/rabbitmq/mocks"
+	smocks "github.com/happening-oss/rabbitmq-message-ops/internal/messaging/selectors/mocks"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/tests/stubs"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/tests/util"
 
-	hmocks "rabbitmq-message-ops/internal/messaging/management/handlers/mocks"
-	"rabbitmq-message-ops/internal/messaging/management/managers"
+	hmocks "github.com/happening-oss/rabbitmq-message-ops/internal/messaging/management/handlers/mocks"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/management/managers"
 )
 
 var _ = Describe("Stream manager", func() {

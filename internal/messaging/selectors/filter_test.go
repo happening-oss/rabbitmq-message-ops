@@ -8,7 +8,7 @@ import (
 	. "github.com/onsi/gomega"
 	"github.com/rabbitmq/amqp091-go"
 
-	"rabbitmq-message-ops/internal/messaging/selectors"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/selectors"
 )
 
 func TestFilters(t *testing.T) {

@@ -5,8 +5,8 @@ import (
 
 	"github.com/urfave/cli/v2"
 
-	"rabbitmq-message-ops/internal/messaging"
-	"rabbitmq-message-ops/internal/messaging/rabbitmq"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging"
+	"github.com/happening-oss/rabbitmq-message-ops/internal/messaging/rabbitmq"
 )
 
 type ctxKey string
