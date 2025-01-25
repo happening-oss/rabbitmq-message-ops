@@ -238,3 +238,13 @@ Contributions are welcome. Please follow the existing code style and ensure all 
 ## 📞 Contact
 
 If you encounter issues or have feature suggestions, please open an **[issue](https://github.com/happening-oss/rabbitmq-message-ops/issues)** on the GitHub repository.
+
+## 🌟 Call to Action
+
+If you find this project useful, consider giving it a star! It helps us grow and reach more developers.
+Your support is greatly appreciated!
+
+## 👨‍💻 Authors
+
+* **[Marko Krznaric](https://github.com/markokrznaric)**
+* **[Goran Rumin](https://github.com/goran-rumin)**
